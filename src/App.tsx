@@ -1,7 +1,13 @@
+import Header from "./components/header";
+import Hero from "./components/hero";
+
 export default function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="font-display">
+      <Header />
+      <main>
+        <Hero />
+      </main>
     </div>
   );
 }
