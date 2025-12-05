@@ -16,6 +16,10 @@
 
   /* Header */
   --color-border-header: #202026;
+
+  /* Badget */
+  --color-badget: #12121c;
+  --color-badget-text: rgb(190, 175, 255);
 }
 
 body {

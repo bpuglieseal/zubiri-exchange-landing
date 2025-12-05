@@ -4,7 +4,7 @@ import Ticker from "./ticker";
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="flex flex-col gap-5 items-center justify-center w-6/12 mx-auto mt-24">
+      <div className="flex flex-col gap-5 items-center justify-center mt-24">
         <div className="max-w-2/3">
           <h1 className="text-6xl font-semibold text-center">
             Take control of your crypto investments
