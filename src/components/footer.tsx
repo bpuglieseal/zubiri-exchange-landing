@@ -1,0 +1,98 @@
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { IconButton } from "./button";
+
+export default function Footer() {
+  return (
+    <footer className="mt-32 mb-8 text-center text-sm text-[rgba(255,255,255,0.6)] py-6">
+      <div className="flex justify-between">
+        <div className="flex flex-col space-y-2">
+          <div className="flex flex-row items-center space-x-2.5">
+            <img src="logo.png" alt="Logo Page" className="size-8 rounded-xl" />
+            <h4 className="text-base font-semibold">Zubiri Exchange</h4>
+          </div>
+          <p className="text-base">Take control of your crypto investments.</p>
+          <div className="flex flex-row gap-4 mt-12 justify-start">
+            <IconButton>
+              <Facebook />
+            </IconButton>
+            <IconButton>
+              <Youtube />
+            </IconButton>
+            <IconButton>
+              <Instagram />
+            </IconButton>
+            <IconButton>
+              <Linkedin />
+            </IconButton>
+          </div>
+        </div>
+        <div className="flex flex-row items-center space-x-12">
+          <nav>
+            <h3 className="text-xl font-medium text-[rgb(204,204,204)]">
+              Navigation
+            </h3>
+            <ul className="mt-4 flex flex-col gap-4 justify-start items-start">
+              <li>
+                <a
+                  href="#"
+                  className="text-sm text-white font-normal opacity-80 transition-opacity hover:opacity-100"
+                >
+                  Overview
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-sm text-white font-normal opacity-80 transition-opacity hover:opacity-100"
+                >
+                  Benefits
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-sm text-white font-normal opacity-80 transition-opacity hover:opacity-100"
+                >
+                  Features
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <nav>
+              <h3 className="text-xl font-medium text-[rgb(204,204,204)]">
+                Information
+              </h3>
+              <ul className="mt-4 flex flex-col gap-4 justify-start items-start">
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-white font-normal opacity-80 transition-opacity hover:opacity-100"
+                  >
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-white font-normal opacity-80 transition-opacity hover:opacity-100"
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm text-white font-normal opacity-80 transition-opacity hover:opacity-100"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  );
+}

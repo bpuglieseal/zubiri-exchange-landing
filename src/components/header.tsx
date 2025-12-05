@@ -42,12 +42,6 @@ export default function Header() {
                 <li>
                   <NavLink href="#">Features</NavLink>
                 </li>
-                <li>
-                  <NavLink href="#">Testimonials</NavLink>
-                </li>
-                <li>
-                  <NavLink href="#">Pricing</NavLink>
-                </li>
               </ul>
             </nav>
           </div>
