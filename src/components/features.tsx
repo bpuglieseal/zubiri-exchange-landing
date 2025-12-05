@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import FeatureCard from "./feature-card";
 
 export default function Features() {
@@ -16,7 +17,13 @@ export default function Features() {
           </p>
         </div>
       </div>
-      <div className="mt-8 columns-2 space-y-4">
+      <motion.div
+        className="mt-8 columns-2 space-y-4"
+        initial={{ opacity: 0, transform: "translateY(60px)" }}
+        whileInView={{ opacity: 1, transform: "translateX(0)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.85 }}
+      >
         <FeatureCard>
           <div className="space-y-4">
             <h4 className="font-medium text-xl">Transactions automation</h4>
@@ -78,7 +85,7 @@ export default function Features() {
             </p>
           </div>
         </FeatureCard>
-      </div>
+      </motion.div>
     </section>
   );
 }

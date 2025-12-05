@@ -1,6 +1,7 @@
 import { Bell, ChartSpline, Wallet, File, Brain, Lock } from "lucide-react";
 import Card from "./card";
 import Button from "./button";
+import { motion } from "motion/react";
 
 export default function Benefits() {
   return (
@@ -19,12 +20,20 @@ export default function Benefits() {
         </div>
       </div>
       <div className="mt-8">
-        <div className="columns-3 gap-3 items-start justify-center grid grid-cols-3">
-          <Card
-            icon={<Wallet />}
-            title="Instant transfers"
-            description="Send and receive crypto in seconds, without delays or bottlenecks."
-          />
+        <motion.div
+          className="columns-3 gap-3 items-start justify-center grid grid-cols-3"
+          initial={{ opacity: 0, transform: "translateY(60px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0)" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.85 }}
+        >
+          <motion.div>
+            <Card
+              icon={<Wallet />}
+              title="Instant transfers"
+              description="Send and receive crypto in seconds, without delays or bottlenecks."
+            />
+          </motion.div>
           <Card
             icon={<ChartSpline />}
             title="Risk analysis"
@@ -50,10 +59,16 @@ export default function Benefits() {
             title="Maximum security"
             description="Protect your funds with top-tier encryption and multi-layer defences."
           />
-        </div>
+        </motion.div>
       </div>
       <div className="mt-24 columns-2 flex gap-6 items-center">
-        <div className="space-y-6 pr-6">
+        <motion.div
+          className="space-y-6 pr-6"
+          initial={{ opacity: 0, transform: "translateX(-60px)" }}
+          whileInView={{ opacity: 1, transform: "translateX(0)" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.85 }}
+        >
           <h2 className="text-4xl font-semibold">
             Stay on top of market moves in real time
           </h2>
@@ -62,10 +77,16 @@ export default function Benefits() {
             happen. Never miss an opportunity or a critical update again.
           </p>
           <Button>Get Started</Button>
-        </div>
-        <div className="hidden min-w-fit min-h-fit md:flex justify-end">
+        </motion.div>
+        <motion.div
+          className="hidden min-w-fit min-h-fit md:flex justify-end"
+          initial={{ opacity: 0, transform: "scale(0.8)" }}
+          whileInView={{ opacity: 1, transform: "scale(1)" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.85 }}
+        >
           <img src="market.png" alt="Market" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

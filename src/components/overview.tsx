@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Badget from "./badget";
 import Button from "./button";
 
@@ -19,46 +20,109 @@ export default function Overview() {
       </div>
       <div className="mt-12 space-y-20 px-8">
         <article className="columns-2 gap-12 flex items-center">
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, transform: "translateX(-60px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.85 }}
+          >
             <div className="flex flex-row space-x-6">
               <Badget>Global Trading</Badget>
               <Badget>Market Access</Badget>
             </div>
-            <h3 className="text-[40px]">Instant access to all markets and stocks</h3>
-            <p>Seamlessly access real-time data across crypto and stock markets instantly, without switching platforms.</p>
+            <h3 className="text-[40px]">
+              Instant access to all markets and stocks
+            </h3>
+            <p>
+              Seamlessly access real-time data across crypto and stock markets
+              instantly, without switching platforms.
+            </p>
             <Button>Get Started</Button>
-          </div>
-          <div className="hidden min-w-fit min-h-fit md:flex justify-end">
-            <img src="stocks.png" alt="Stocks.png" className="rounded-xl object-cover"/>
-          </div>
+          </motion.div>
+          <motion.div
+            className="hidden min-w-fit min-h-fit md:flex justify-end"
+            initial={{ opacity: 0, transform: "translateX(60px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.85 }}
+          >
+            <img
+              src="stocks.png"
+              alt="Stocks.png"
+              className="rounded-xl object-cover"
+            />
+          </motion.div>
         </article>
         <article className="columns-2 gap-12 flex items-center">
-          <div className="hidden min-w-fit min-h-fit md:flex justify-end">
-            <img src="time.png" alt="Stocks.png" className="rounded-xl object-cover"/>
-          </div>
-          <div className="space-y-6">
+          <motion.div
+            className="hidden min-w-fit min-h-fit md:flex justify-end"
+            initial={{ opacity: 0, transform: "translateX(-60px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.85 }}
+          >
+            <img
+              src="time.png"
+              alt="Stocks.png"
+              className="rounded-xl object-cover"
+            />
+          </motion.div>
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, transform: "translateX(60px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.85 }}
+          >
             <div className="flex flex-row space-x-6">
               <Badget>Smart insights</Badget>
               <Badget>Actionable data</Badget>
             </div>
-            <h3 className="text-[40px]">Data that drives smart strategic decisions</h3>
-            <p>Analyse your investments from every angle. Dive into performance and returns, and easily filter your data.</p>
+            <h3 className="text-[40px]">
+              Data that drives smart strategic decisions
+            </h3>
+            <p>
+              Analyse your investments from every angle. Dive into performance
+              and returns, and easily filter your data.
+            </p>
             <Button>Get Started</Button>
-          </div>
+          </motion.div>
         </article>
         <article className="columns-2 gap-12 flex items-center">
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, transform: "translateX(-60px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.85 }}
+          >
             <div className="flex flex-row space-x-6">
               <Badget>Fast payments</Badget>
               <Badget>Instant access</Badget>
             </div>
-            <h3 className="text-[40px]">Effortless payments & instant requests</h3>
-            <p>Easily send or request payments from anyone, just like you would with your bank with support for 100+ currencies.</p>
+            <h3 className="text-[40px]">
+              Effortless payments & instant requests
+            </h3>
+            <p>
+              Easily send or request payments from anyone, just like you would
+              with your bank with support for 100+ currencies.
+            </p>
             <Button>Get Started</Button>
-          </div>
-          <div className="hidden min-w-fit min-h-fit md:flex justify-end">
-            <img src="payments.png" alt="Payments.png" className="rounded-xl object-cover"/>
-          </div>
+          </motion.div>
+          <motion.div
+            className="hidden min-w-fit min-h-fit md:flex justify-end"
+            initial={{ opacity: 0, transform: "translateX(60px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0)" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.85 }}
+          >
+            <img
+              src="payments.png"
+              alt="Payments.png"
+              className="rounded-xl object-cover"
+            />
+          </motion.div>
         </article>
       </div>
     </section>
