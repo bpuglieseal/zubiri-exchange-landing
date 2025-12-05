@@ -20,6 +20,13 @@
   /* Badget */
   --color-badget: #12121c;
   --color-badget-text: rgb(190, 175, 255);
+
+  /* Card */
+  --color-card-bg: #05050a;
+  --color-card-border: #17181a;
+  --shadow-card: 0px 8px 24px 0px rgba(0, 0, 0, 0.04);
+  --color-card-icon-bg: #12121c;
+  --shadow-card-icon: 0px 0px 8px 0px inset rgba(0, 0, 0, 0.2);
 }
 
 body {
