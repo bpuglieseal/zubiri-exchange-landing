@@ -1,4 +1,5 @@
 import Button from "./button";
+import { Menu } from "lucide-react";
 
 const NavLink = ({
   href,
@@ -17,20 +18,30 @@ const NavLink = ({
   );
 };
 
+const ResponsiveNavBar = () => {
+  return (
+    <div className="md:hidden flex items-center">
+      <Button type="icon">
+        <Menu className="w-6 h-6 text-white cursor-pointer" />
+      </Button>
+    </div>
+  );
+};
+
 export default function Header() {
   return (
-    <header className="p-4 bg-dark text-white py-4 px-16 border-b border-b-border-header">
+    <header className="p-4 bg-dark text-white py-6 md:px-16 px-4 border-b border-b-border-header">
       <div className="flex flex-row justify-between items-center mx-auto xl:max-w-6xl">
         <div className="flex flex-row items-center gap-12">
-          <div className="flex flex-row items-center gap-4">
+          <div className="flex flex-row items-center gap-3">
             <img
               src="/zubiri-exchange-landing/logo.png"
               alt="Zubiri Exchange Logo"
-              className="w-12 h-12 rounded-xl"
+              className="w-9 h-9 rounded-xl md:w-12 md:h-12"
             />
-            <h2 className="text-2xl font-medium">Zubiri Exchange</h2>
+            <h2 className="text-lg md:text-2xl font-medium">Zubiri Exchange</h2>
           </div>
-          <div>
+          <div className="hidden md:block">
             <nav>
               <ul className="flex flex-row items-center space-x-3.5">
                 <li>
@@ -46,7 +57,8 @@ export default function Header() {
             </nav>
           </div>
         </div>
-        <div className="flex flex-row items-center gap-5">
+        <ResponsiveNavBar />
+        <div className="flex-row items-center gap-5 hidden md:flex">
           <NavLink href="#">Contact Us</NavLink>
           <Button>Get Started</Button>
         </div>
