@@ -85,7 +85,7 @@ export default function Benefits() {
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.85 }}
         >
-          <img src="market.png" alt="Market" />
+          <img src="/zubiri-exchange-landing/market.png" alt="Market" />
         </motion.div>
       </div>
     </section>

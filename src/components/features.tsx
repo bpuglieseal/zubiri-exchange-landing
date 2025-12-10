@@ -32,7 +32,7 @@ export default function Features() {
               effortless to track all your investments.
             </p>
             <img
-              src="feat-1.png"
+              src="/zubiri-exchange-landing/feat-1.png"
               alt="Automation Illustration"
               className="mt-4 w-full"
             />
@@ -41,7 +41,7 @@ export default function Features() {
         <FeatureCard>
           <div className="flex flex-row gap-4 items-center">
             <img
-              src="feat-3.png"
+              src="/zubiri-exchange-landing/feat-3.png"
               alt="Feature Illustration"
               className="mt-4 w-full max-w-32"
             />
@@ -57,7 +57,7 @@ export default function Features() {
         <FeatureCard>
           <div className="flex flex-row gap-4 items-center">
             <img
-              src="feat-2.png"
+              src="/zubiri-exchange-landing/feat-2.png"
               alt="Feature Illustration"
               className="mt-4 w-full max-w-32"
             />
@@ -72,7 +72,7 @@ export default function Features() {
         <FeatureCard>
           <div className="space-y-4">
             <img
-              src="feat-4.png"
+              src="/zubiri-exchange-landing/feat-4.png"
               alt="Automation Illustration"
               className="mt-4 w-full"
             />

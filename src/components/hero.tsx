@@ -41,7 +41,7 @@ export default function Hero() {
               }}
               animate={{ scale: 1, opacity: 1, transform: "translateY(0)" }}
               transition={{ duration: 1, ease: "easeOut" }}
-              src="app.png"
+              src="/zubiri-exchange-landing/app.png"
               alt="Zubiri Exchange App"
               className="shadow-image"
             />

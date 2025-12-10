@@ -5,19 +5,19 @@ export default function Ticker() {
     <ul className="flex flex-row items-center justify-center gap-10 mb-10 opacity-70">
       <Marquee>
         <li>
-          <img src="cosmos.png" alt="Cosmos" />
+          <img src="/zubiri-exchange-landing/cosmos.png" alt="Cosmos" />
         </li>
         <li>
-          <img src="etherum.png" alt="Ethereum" />
+          <img src="/zubiri-exchange-landing/etherum.png" alt="Ethereum" />
         </li>
         <li>
-          <img src="solana.png" alt="Solana" />
+          <img src="/zubiri-exchange-landing/solana.png" alt="Solana" />
         </li>
         <li>
-          <img src="stacks.png" alt="Stacks" />
+          <img src="/zubiri-exchange-landing/stacks.png" alt="Stacks" />
         </li>
         <li>
-          <img src="polygon.png" alt="Polygon" />
+          <img src="/zubiri-exchange-landing/polygon.png" alt="Polygon" />
         </li>
       </Marquee>
     </ul>

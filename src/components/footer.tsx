@@ -7,7 +7,11 @@ export default function Footer() {
       <div className="flex justify-between">
         <div className="flex flex-col space-y-2">
           <div className="flex flex-row items-center space-x-2.5">
-            <img src="logo.png" alt="Logo Page" className="size-8 rounded-xl" />
+            <img
+              src="/zubiri-exchange-landing/logo.png"
+              alt="Logo Page"
+              className="size-8 rounded-xl"
+            />
             <h4 className="text-base font-semibold">Zubiri Exchange</h4>
           </div>
           <p className="text-base">Take control of your crypto investments.</p>

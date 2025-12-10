@@ -48,7 +48,7 @@ export default function Overview() {
             viewport={{ once: true, amount: 0.85 }}
           >
             <img
-              src="stocks.png"
+              src="/zubiri-exchange-landing/stocks.png"
               alt="Stocks.png"
               className="rounded-xl object-cover"
             />
@@ -63,7 +63,7 @@ export default function Overview() {
             viewport={{ once: true, amount: 0.85 }}
           >
             <img
-              src="time.png"
+              src="/zubiri-exchange-landing/time.png"
               alt="Stocks.png"
               className="rounded-xl object-cover"
             />
@@ -118,7 +118,7 @@ export default function Overview() {
             viewport={{ once: true, amount: 0.85 }}
           >
             <img
-              src="payments.png"
+              src="/zubiri-exchange-landing/payments.png"
               alt="Payments.png"
               className="rounded-xl object-cover"
             />

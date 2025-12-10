@@ -24,7 +24,7 @@ export default function Header() {
         <div className="flex flex-row items-center gap-12">
           <div className="flex flex-row items-center gap-4">
             <img
-              src="logo.png"
+              src="/zubiri-exchange-landing/logo.png"
               alt="Zubiri Exchange Logo"
               className="w-12 h-12 rounded-xl"
             />
