@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
-import { IconButton } from "./button";
+import { IconButton } from "@/components/button";
 
 export default function Footer() {
   return (

@@ -1,4 +1,14 @@
 import Button from "./button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
 
 const NavLink = ({
@@ -20,17 +30,31 @@ const NavLink = ({
 
 const ResponsiveNavBar = () => {
   return (
-    <div className="md:hidden flex items-center">
-      <Button type="icon">
-        <Menu className="w-6 h-6 text-white cursor-pointer" />
-      </Button>
-    </div>
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button type="icon">
+          <Menu className="w-6 h-6 text-white cursor-pointer" />
+        </Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>Navigation</DrawerTitle>
+          <DrawerClose />
+        </DrawerHeader>
+        <DrawerDescription>
+          <p>Prueba</p>
+        </DrawerDescription>
+        <DrawerFooter>
+          <Button>Get Started</Button>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 };
 
 export default function Header() {
   return (
-    <header className="p-4 bg-dark text-white py-6 md:px-16 px-4 border-b border-b-border-header">
+    <header className="p-4 bg-dark text-white py-6 md:px-16 px-5 border-b border-b-border-header">
       <div className="flex flex-row justify-between items-center mx-auto xl:max-w-6xl">
         <div className="flex flex-row items-center gap-12">
           <div className="flex flex-row items-center gap-3">
