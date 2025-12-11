@@ -5,22 +5,20 @@ import Ticker from "./ticker";
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="flex flex-col gap-5 items-center justify-center mt-24">
-        <div className="max-w-2/3">
-          <h1 className="text-6xl font-semibold text-center">
+      <div className="flex flex-col gap-5 items-center justify-center mt-16">
+        <div className="w-[96%] md:max-w-2/3 space-y-4 flex flex-col justify-center items-center">
+          <h1 className="text-4xl md:text-6xl font-medium text-center ">
             Take control of your crypto investments
           </h1>
-        </div>
-        <div className="max-w-2/3">
           <p className="text-xl text-center text-[rgb(204,204,204)]">
             Your assets, streamlined. Zubiri Exchange delivers instant
             transactions, low fees, and next-level security.
           </p>
+          <div className="mt-4">
+            <Button size="large">Start for free</Button>
+          </div>
         </div>
-        <div>
-          <Button>Start for free</Button>
-        </div>
-        <div className="mt-10 space-y-8">
+        <div className="mt-6 space-y-8 text-sm md:text-md">
           <div className="overflow-hidden">
             <motion.p
               className="text-[rgb(204,204,204)] text-md text-center overflow-hidden"
@@ -31,8 +29,10 @@ export default function Hero() {
               Support top 30+ chains
             </motion.p>
           </div>
-          <Ticker />
-          <div className="relative">
+          <div className="w-11/12 mx-auto">
+            <Ticker />
+          </div>
+          <div className="relative w-[98%] mx-auto">
             <motion.img
               initial={{
                 scale: 0.9,

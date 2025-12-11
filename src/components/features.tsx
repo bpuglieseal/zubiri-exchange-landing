@@ -5,20 +5,20 @@ export default function Features() {
   return (
     <section id="features" className="mt-32">
       <div className="flex flex-col gap-5 items-center justify-center mt-24">
-        <div className="max-w-5/12">
-          <h2 className="text-4xl font-semibold text-center">
+        <div className="md:max-w-5/12">
+          <h2 className="text-2xl md:text-4xl font-semibold text-center">
             Invest without guesswork
           </h2>
         </div>
-        <div className="max-w-8/12">
-          <p className="text-xl text-center text-[rgb(204,204,204)]">
+        <div className="md:max-w-8/12">
+          <p className="md:text-xl text-center text-[rgb(204,204,204)] max-sm:px-4">
             Leverage smart automation and data-driven insights to make informed
             decisions.
           </p>
         </div>
       </div>
       <motion.div
-        className="mt-8 columns-2 space-y-4"
+        className="mt-8 columns-1 space-y-4 md:columns-2 px-6 md:px-0 md:space-y-0 md:gap-6"
         initial={{ opacity: 0, transform: "translateY(60px)" }}
         whileInView={{ opacity: 1, transform: "translateX(0)" }}
         transition={{ duration: 1, ease: "easeOut" }}

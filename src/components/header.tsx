@@ -32,9 +32,11 @@ const ResponsiveNavBar = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button type="icon">
-          <Menu className="w-6 h-6 text-white cursor-pointer" />
-        </Button>
+        <div className="block md:hidden w-fit">
+          <Button type="icon">
+            <Menu className="w-6 h-6 text-white cursor-pointer" />
+          </Button>
+        </div>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
@@ -63,7 +65,7 @@ export default function Header() {
               alt="Zubiri Exchange Logo"
               className="w-9 h-9 rounded-xl md:w-12 md:h-12"
             />
-            <h2 className="text-lg md:text-2xl font-medium">Zubiri Exchange</h2>
+            <h2 className="text-xl md:text-2xl font-medium">Zubiri Exchange</h2>
           </div>
           <div className="hidden md:block">
             <nav>

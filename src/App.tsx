@@ -14,8 +14,8 @@ export default function App() {
         <Overview />
         <Benefits />
         <Features />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }
