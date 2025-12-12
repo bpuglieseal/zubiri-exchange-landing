@@ -30,10 +30,23 @@
   --shadow-card: 0px 8px 24px 0px rgba(0, 0, 0, 0.04);
   --color-card-icon-bg: #12121c;
   --shadow-card-icon: 0px 0px 8px 0px inset rgba(0, 0, 0, 0.2);
+
+  /* Input */
+  --color-bg-input: #12121c;
+  --color-input-focus-border: #202026;
+  --color-input-placeholder: #a6a6a9;
+  --color-label: rgb(166, 166, 169);
 }
 
 body {
   @apply bg-dark font-display text-white;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
 }
 
 @theme inline {

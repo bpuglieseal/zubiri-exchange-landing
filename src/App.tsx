@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Overview from "./components/overview";
+import ContactForm from "./components/contact-form";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Overview />
         <Benefits />
         <Features />
+        <ContactForm />
       </main>
       <Footer />
     </div>
