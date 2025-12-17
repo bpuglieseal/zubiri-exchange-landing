@@ -10,7 +10,7 @@ const TickerImage = ({ src, alt }: { src: string; alt: string }) => {
 
 export default function Ticker() {
   return (
-    <ul
+    <div
       className="flex flex-row items-center justify-center mb-10 opacity-70 p-3"
       style={{
         maskImage:
@@ -18,28 +18,15 @@ export default function Ticker() {
       }}
     >
       <Marquee gradient speed={50} gradientColor="hsl(0, 0%, 1%)">
-        <li>
-          <TickerImage src="/zubiri-exchange-landing/cosmos.png" alt="Cosmos" />
-        </li>
-        <li>
-          <TickerImage
-            src="/zubiri-exchange-landing/etherum.png"
-            alt="Ethereum"
-          />
-        </li>
-        <li>
-          <TickerImage src="/zubiri-exchange-landing/solana.png" alt="Solana" />
-        </li>
-        <li>
-          <TickerImage src="/zubiri-exchange-landing/stacks.png" alt="Stacks" />
-        </li>
-        <li>
-          <TickerImage
-            src="/zubiri-exchange-landing/polygon.png"
-            alt="Polygon"
-          />
-        </li>
+        <TickerImage src="/zubiri-exchange-landing/cosmos.png" alt="Cosmos" />
+        <TickerImage
+          src="/zubiri-exchange-landing/etherum.png"
+          alt="Ethereum"
+        />
+        <TickerImage src="/zubiri-exchange-landing/solana.png" alt="Solana" />
+        <TickerImage src="/zubiri-exchange-landing/stacks.png" alt="Stacks" />
+        <TickerImage src="/zubiri-exchange-landing/polygon.png" alt="Polygon" />
       </Marquee>
-    </ul>
+    </div>
   );
 }

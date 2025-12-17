@@ -6,6 +6,7 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   onClick?: () => void;
   className?: string;
+  buttonType?: "button" | "submit" | "reset";
 }
 
 export function IconButton({ children }: ButtonProps) {
@@ -25,6 +26,7 @@ export default function Button({
   size = "medium",
   onClick,
   className,
+  buttonType = "button",
 }: ButtonProps) {
   const typeClasses = clsx(
     type === "normal" &&
@@ -41,7 +43,7 @@ export default function Button({
   return (
     <button
       className={`${typeClasses} ${sizeClasses} ${className}`}
-      type="button"
+      type={buttonType}
       onClick={onClick}
     >
       {children}

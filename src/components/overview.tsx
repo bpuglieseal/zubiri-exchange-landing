@@ -1,42 +1,47 @@
 import { motion } from "motion/react";
 import Badget from "./badget";
 import Button from "./button";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export const Article = ({
   title,
   description,
   image,
   badgets,
+  right = false,
 }: {
   title: string;
   description: string;
   image: string;
   badgets: string[];
+  right?: boolean;
 }) => {
   return (
-    <article>
+    <article className="lg:flex lg:flex-row lg:items-center gap-16">
+      {!right && (
+        <motion.div
+          className="space-y-4 justify-between"
+          initial={{ opacity: 0, transform: "translateX(-20px)" }}
+          whileInView={{ opacity: 1, transform: "translateX(0)" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.85 }}
+        >
+          <div className="flex flex-row space-x-3 md:space-x-6">
+            {badgets.map((badget) => (
+              <Badget key={badget}>{badget}</Badget>
+            ))}
+          </div>
+          <h5 className="text-2xl md:text-[40px] text-left pr-2 md:pr-0">
+            {title}
+          </h5>
+          <p>{description}</p>
+          <div className="hidden md:block">
+            <Button>Get Started</Button>
+          </div>
+        </motion.div>
+      )}
       <motion.div
-        className="space-y-4"
-        initial={{ opacity: 0, transform: "translateX(-20px)" }}
-        whileInView={{ opacity: 1, transform: "translateX(0)" }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.85 }}
-      >
-        <div className="flex flex-row space-x-3 md:space-x-6">
-          {badgets.map((badget) => (
-            <Badget key={badget}>{badget}</Badget>
-          ))}
-        </div>
-        <h5 className="text-2xl md:text-[40px] text-left pr-2 md:pr-0">
-          {title}
-        </h5>
-        <p>{description}</p>
-        <div className="hidden md:block">
-          <Button>Get Started</Button>
-        </div>
-      </motion.div>
-      <motion.div
-        className="min-w-fit min-h-fit md:flex justify-end"
+        className="min-w-fit min-h-fit lg:flex justify-end max-lg:mt-8"
         initial={{ opacity: 0, transform: "translateX(20px)" }}
         whileInView={{ opacity: 1, transform: "translateX(0)" }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -48,6 +53,28 @@ export const Article = ({
           className="rounded-xl object-cover w-full"
         />
       </motion.div>
+      {right && (
+        <motion.div
+          className="space-y-4 justify-between"
+          initial={{ opacity: 0, transform: "translateX(-20px)" }}
+          whileInView={{ opacity: 1, transform: "translateX(0)" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.85 }}
+        >
+          <div className="flex flex-row space-x-3 md:space-x-6">
+            {badgets.map((badget) => (
+              <Badget key={badget}>{badget}</Badget>
+            ))}
+          </div>
+          <h5 className="text-2xl md:text-[40px] text-left pr-2 md:pr-0">
+            {title}
+          </h5>
+          <p>{description}</p>
+          <div className="hidden md:block">
+            <Button>Get Started</Button>
+          </div>
+        </motion.div>
+      )}
     </article>
   );
 };
@@ -77,6 +104,8 @@ const articles = [
 ];
 
 export default function Overview() {
+  const isDesktop = useMediaQuery("(max-width: 1024px)");
+
   return (
     <section id="overview" className="mt-32">
       <div className="flex flex-col gap-3 items-center justify-center mt-24">
@@ -93,13 +122,14 @@ export default function Overview() {
         </div>
       </div>
       <div className="mt-12 space-y-16 px-8">
-        {articles.map((article) => (
+        {articles.map((article, idx) => (
           <Article
             key={article.title}
             title={article.title}
             description={article.description}
             image={article.image}
             badgets={article.badgets}
+            right={idx % 2 !== 0 && !isDesktop}
           />
         ))}
       </div>

@@ -29,7 +29,7 @@ const ResponsiveNavBar = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <div className="block md:hidden w-fit">
+        <div className="block lg:hidden w-fit">
           <Button type="icon">
             <Menu className="w-6 h-6 text-white cursor-pointer" />
           </Button>
@@ -40,17 +40,17 @@ const ResponsiveNavBar = () => {
           <nav className="pt-8 pb-5">
             <ul className="flex flex-col space-y-8 items-center">
               <li className="text-white">
-                <a href="#" className="text-md">
+                <a href="#overview" className="text-md">
                   Overview
                 </a>
               </li>
               <li className="text-white">
-                <a href="#" className="text-md">
+                <a href="#benefits" className="text-md">
                   Benefits
                 </a>
               </li>
               <li className="text-white">
-                <a href="#" className="text-md">
+                <a href="#features" className="text-md">
                   Features
                 </a>
               </li>
@@ -78,25 +78,25 @@ export default function Header() {
             />
             <h2 className="text-xl md:text-2xl font-medium">Zubiri Exchange</h2>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <nav>
               <ul className="flex flex-row items-center space-x-3.5">
                 <li>
-                  <NavLink href="#">Overview</NavLink>
+                  <NavLink href="#overview">Overview</NavLink>
                 </li>
                 <li>
-                  <NavLink href="#">Benefits</NavLink>
+                  <NavLink href="#benefits">Benefits</NavLink>
                 </li>
                 <li>
-                  <NavLink href="#">Features</NavLink>
+                  <NavLink href="#features">Features</NavLink>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
         <ResponsiveNavBar />
-        <div className="flex-row items-center gap-5 hidden md:flex">
-          <NavLink href="#">Contact Us</NavLink>
+        <div className="flex-row items-center gap-5 hidden lg:flex">
+          <NavLink href="#contact">Contact Us</NavLink>
           <Button>Get Started</Button>
         </div>
       </div>

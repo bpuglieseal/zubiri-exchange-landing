@@ -3,7 +3,7 @@ import { IconButton } from "@/components/button";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 mb-8 text-center text-sm text-[rgba(255,255,255,0.6)] py-6">
+    <footer className="container mx-auto md:max-w-10/12 2xl:w-7/12 mt-32 mb-8 text-center text-sm text-[rgba(255,255,255,0.6)] py-6">
       <div className="flex md:justify-between md:flex-row flex-col justify-center items-center">
         <div className="flex flex-col space-y-2">
           <div className="flex flex-row items-center space-x-2.5">

@@ -59,9 +59,9 @@ export default function Benefits() {
           />
         </motion.div>
       </div>
-      <article className="mt-24 columns flex md:flex-row flex-col gap-6 items-center">
+      <article className="mt-24 columns flex lg:flex-row flex-col gap-6 items-center">
         <motion.div
-          className="space-y-6 md:pr-6 px-8 flex flex-col justify-center items-center md:items-start md:justify-start"
+          className="space-y-6 lg:pr-6 px-8 flex flex-col justify-center items-center lg:items-start lg:justify-start"
           initial={{ opacity: 0, transform: "translateX(-60px)" }}
           whileInView={{ opacity: 1, transform: "translateX(0)" }}
           transition={{ duration: 1, ease: "easeOut" }}

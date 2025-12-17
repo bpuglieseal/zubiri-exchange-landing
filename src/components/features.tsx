@@ -18,7 +18,7 @@ export default function Features() {
         </div>
       </div>
       <motion.div
-        className="mt-8 columns-1 space-y-4 md:columns-2 px-6 md:px-0 md:space-y-0 md:gap-6"
+        className="mt-8 columns-1 space-y-4 md:columns-2 px-6 md:px-0 md:space-y-0 md:gap-4 md:max-w-fit md:max-h-fit"
         initial={{ opacity: 0, transform: "translateY(60px)" }}
         whileInView={{ opacity: 1, transform: "translateX(0)" }}
         transition={{ duration: 1, ease: "easeOut" }}
