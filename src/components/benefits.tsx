@@ -65,7 +65,7 @@ export default function Benefits() {
           initial={{ opacity: 0, transform: "translateX(-60px)" }}
           whileInView={{ opacity: 1, transform: "translateX(0)" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.85 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className="text-2xl md:text-4xl font-semibold text-center md:text-left">
             Stay on top of market moves in real time
@@ -81,7 +81,7 @@ export default function Benefits() {
           initial={{ opacity: 0, transform: "scale(0.8)" }}
           whileInView={{ opacity: 1, transform: "scale(1)" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.85 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <img src="/zubiri-exchange-landing/market.png" alt="Market" />
         </motion.div>

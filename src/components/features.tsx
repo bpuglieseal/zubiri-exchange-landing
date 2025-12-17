@@ -22,7 +22,7 @@ export default function Features() {
         initial={{ opacity: 0, transform: "translateY(60px)" }}
         whileInView={{ opacity: 1, transform: "translateX(0)" }}
         transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.85 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <FeatureCard>
           <div className="space-y-4">

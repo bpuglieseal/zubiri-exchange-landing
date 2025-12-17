@@ -1,12 +1,9 @@
 import Button from "./button";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
@@ -38,13 +35,27 @@ const ResponsiveNavBar = () => {
           </Button>
         </div>
       </DrawerTrigger>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Navigation</DrawerTitle>
-          <DrawerClose />
-        </DrawerHeader>
+      <DrawerContent className="bg-transparent backdrop-blur-xs">
         <DrawerDescription>
-          <p>Prueba</p>
+          <nav className="pt-8 pb-5">
+            <ul className="flex flex-col space-y-8 items-center">
+              <li className="text-white">
+                <a href="#" className="text-md">
+                  Overview
+                </a>
+              </li>
+              <li className="text-white">
+                <a href="#" className="text-md">
+                  Benefits
+                </a>
+              </li>
+              <li className="text-white">
+                <a href="#" className="text-md">
+                  Features
+                </a>
+              </li>
+            </ul>
+          </nav>
         </DrawerDescription>
         <DrawerFooter>
           <Button>Get Started</Button>
