@@ -17,7 +17,7 @@ export const Article = ({
     <article>
       <motion.div
         className="space-y-4"
-        initial={{ opacity: 0, transform: "translateX(-60px)" }}
+        initial={{ opacity: 0, transform: "translateX(-20px)" }}
         whileInView={{ opacity: 1, transform: "translateX(0)" }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.85 }}
@@ -37,7 +37,7 @@ export const Article = ({
       </motion.div>
       <motion.div
         className="min-w-fit min-h-fit md:flex justify-end"
-        initial={{ opacity: 0, transform: "translateX(60px)" }}
+        initial={{ opacity: 0, transform: "translateX(20px)" }}
         whileInView={{ opacity: 1, transform: "translateX(0)" }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.85 }}
