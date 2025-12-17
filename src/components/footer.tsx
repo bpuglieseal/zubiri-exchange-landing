@@ -1,17 +1,21 @@
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
-import { IconButton } from "./button";
+import { IconButton } from "@/components/button";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 mb-8 text-center text-sm text-[rgba(255,255,255,0.6)] py-6">
-      <div className="flex justify-between">
+    <footer className="container mx-auto md:max-w-10/12 2xl:w-7/12 mt-32 mb-8 text-center text-sm text-[rgba(255,255,255,0.6)] py-6">
+      <div className="flex md:justify-between md:flex-row flex-col justify-center items-center">
         <div className="flex flex-col space-y-2">
           <div className="flex flex-row items-center space-x-2.5">
-            <img src="logo.png" alt="Logo Page" className="size-8 rounded-xl" />
+            <img
+              src="/zubiri-exchange-landing/logo.png"
+              alt="Logo Page"
+              className="size-8 rounded-xl"
+            />
             <h4 className="text-base font-semibold">Zubiri Exchange</h4>
           </div>
           <p className="text-base">Take control of your crypto investments.</p>
-          <div className="flex flex-row gap-4 mt-12 justify-start">
+          <div className="flex flex-row gap-4 mt-2 md:mt-12 justify-start">
             <IconButton>
               <Facebook />
             </IconButton>
@@ -26,7 +30,7 @@ export default function Footer() {
             </IconButton>
           </div>
         </div>
-        <div className="flex flex-row items-center space-x-12">
+        <div className="flex flex-row items-center space-x-12 max-sm:justify-between max-sm:mt-6 max-sm:gap-6">
           <nav>
             <h3 className="text-xl font-medium text-[rgb(204,204,204)]">
               Navigation
