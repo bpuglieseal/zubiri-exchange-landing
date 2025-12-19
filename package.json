@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-dialog": "^1.1.15",
     "@tailwindcss/vite": "^4.1.17",
     "class-variance-authority": "^0.7.1",
@@ -20,9 +21,11 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-fast-marquee": "^1.6.5",
+    "react-hook-form": "^7.68.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17",
-    "vaul": "^1.1.2"
+    "vaul": "^1.1.2",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
