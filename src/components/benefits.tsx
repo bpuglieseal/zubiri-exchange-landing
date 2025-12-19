@@ -21,7 +21,7 @@ export default function Benefits() {
       </div>
       <div className="mt-8">
         <motion.div
-          className="gap-3 items-start justify-center grid grid-cols-1 md:grid-cols-3 px-8"
+          className="gap-3 items-start justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8"
           initial={{ opacity: 0, transform: "translateY(60px)" }}
           whileInView={{ opacity: 1, transform: "translateY(0)" }}
           transition={{ duration: 1, ease: "easeOut" }}
